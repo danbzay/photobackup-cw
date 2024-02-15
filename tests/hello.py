@@ -1,9 +1,5 @@
-from flask import Flask
-app = Flask(__name__)
+def hello(environ, start_responce)
+    start_responce('200 OK', [('Content-Type', 'text/plain')])
+    yield b'Hello, World!\n'
 
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
 
-if __name__ == '__main__':
-    app.run()
